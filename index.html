@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz & Event Countdown</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Quiz App with Timer</h1>
+    <section id="quiz-section">
+      <div id="quiz-controls">
+        <button id="start-quiz">Start Quiz</button>
+        <div id="quiz-timer">Time: <span id="time-remaining">10</span>s</div>
+        <div class="progress" aria-hidden="true"><div id="quiz-progress"></div></div>
+        <div id="warning" aria-live="polite"></div>
+      </div>
+
+      <form id="quiz-form">
+        <ol>
+          <li>
+            <fieldset>
+              <legend>1) What is 2 + 2?</legend>
+              <label><input type="radio" name="q1" value="A"> 3</label>
+              <label><input type="radio" name="q1" value="B"> 4</label>
+              <label><input type="radio" name="q1" value="C"> 5</label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>2) Which is a prime number?</legend>
+              <label><input type="radio" name="q2" value="A"> 4</label>
+              <label><input type="radio" name="q2" value="B"> 6</label>
+              <label><input type="radio" name="q2" value="C"> 7</label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>3) Which color mixes with blue to make green?</legend>
+              <label><input type="radio" name="q3" value="A"> Red</label>
+              <label><input type="radio" name="q3" value="B"> Yellow</label>
+              <label><input type="radio" name="q3" value="C"> Black</label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>4) The capital of France?</legend>
+              <label><input type="radio" name="q4" value="A"> Berlin</label>
+              <label><input type="radio" name="q4" value="B"> Madrid</label>
+              <label><input type="radio" name="q4" value="C"> Paris</label>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>5) Which gas do plants produce?</legend>
+              <label><input type="radio" name="q5" value="A"> Oxygen</label>
+              <label><input type="radio" name="q5" value="B"> Carbon Dioxide</label>
+              <label><input type="radio" name="q5" value="C"> Nitrogen</label>
+            </fieldset>
+          </li>
+        </ol>
+        <button id="submit-quiz" type="button">Submit</button>
+      </form>
+      <div id="quiz-result" aria-live="polite"></div>
+    </section>
+
+    <hr>
+
+    <h1>Event Countdown Timer</h1>
+    <section id="countdown-section">
+      <form id="event-form">
+        <label>Event Date & Time: <input id="event-datetime" type="datetime-local"></label>
+        <button id="start-countdown" type="button">Start Countdown</button>
+      </form>
+      <div id="countdown-display">
+        <div class="time-box"><div class="num" id="days">0</div><div class="label">Days</div></div>
+        <div class="time-box"><div class="num" id="hours">0</div><div class="label">Hours</div></div>
+        <div class="time-box"><div class="num" id="minutes">0</div><div class="label">Minutes</div></div>
+        <div class="time-box"><div class="num" id="seconds">0</div><div class="label">Seconds</div></div>
+      </div>
+      <div id="countdown-message" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

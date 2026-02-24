@@ -1,0 +1,49 @@
+
+:root{
+	--bg:#0f1724;
+	--card:#0b1220;
+	--accent:#6ee7b7;
+	--accent-2:#60a5fa;
+	--muted:#94a3b8;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:24px;background:linear-gradient(180deg,#e6eefc 0%, #f7fbff 100%);color:#0f1724}
+main{max-width:980px;margin:0 auto;background:linear-gradient(180deg,#ffffff 0%, #f6fbff 100%);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(15,23,36,0.08)}
+h1{font-size:1.25rem;margin-bottom:12px;color:#0b2545}
+
+/* Quiz card */
+#quiz-section{padding:18px;border-radius:10px;background:linear-gradient(90deg,#ffffff,#f8fbff);border:1px solid #e6eefc;margin-bottom:18px}
+#quiz-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:12px}
+#quiz-timer{font-weight:700;color:#0b2545;background:#eef7ff;padding:6px 10px;border-radius:8px;border:1px solid #dbeafe}
+#warning{color:#b34700;font-weight:700;margin-left:8px}
+
+/* progress */
+.progress{width:220px;height:12px;background:#eef2ff;border-radius:999px;overflow:hidden;border:1px solid #e0e7ff}
+.progress > div{height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));width:100%;transition:width 0.25s linear}
+
+fieldset{border:0;margin:8px 0;padding:0}
+ol{padding-left:18px}
+label{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;cursor:pointer}
+label:hover{background:#f1f8ff}
+input[type=radio]{accent-color: var(--accent-2)}
+
+#quiz-result{margin-top:14px;font-weight:800;color:#083344}
+
+/* Countdown */
+#countdown-section{padding:18px;border-radius:10px;background:linear-gradient(90deg,#fff,#f8fbff);border:1px solid #e6eefc}
+#event-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+#countdown-display{margin-top:14px;display:flex;gap:10px;align-items:center}
+.time-box{background:linear-gradient(180deg,#ffffff,#f1f9ff);padding:12px 16px;border-radius:10px;box-shadow:0 6px 18px rgba(11,37,69,0.06);min-width:72px;text-align:center}
+.time-box .num{font-weight:800;font-size:1.1rem;color:#0b2545}
+.time-box .label{font-size:0.8rem;color:var(--muted)}
+
+#countdown-message{margin-top:8px;color:#b34700;font-weight:700}
+
+button{padding:8px 12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#04263b;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(96,165,250,0.12)}
+button:disabled{opacity:0.6;cursor:not-allowed}
+
+@media (max-width:600px){
+	.progress{width:140px}
+	.time-box{min-width:56px;padding:10px}
+}
+
